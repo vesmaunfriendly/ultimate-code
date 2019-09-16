@@ -1,1 +1,43 @@
-meh
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+    
+        double result = 0;
+        Scanner sc = new Scanner(System.in);
+        double a;
+        double b;
+        String answer = "yes";
+        
+        while (answer.equals("yes")) {
+            System.out.println("введите число 1");
+            a = sc.nextDouble();
+            System.out.println("введите число 2");
+            b = sc.nextDouble();
+            System.out.println("введите действие (+, -, * или /)");
+            String operation = sc.next();
+            switch (operation) {
+                case "+":
+                    result = (a + b);
+                    break;
+                case "-":
+                    result = (a - b);
+                    break;
+                case "*":
+                    (result) = (a * b);
+                    break;
+                case "/":
+                    (result) = (a / b);
+            }
+            System.out.println("ответ: " + result);
+            System.out.println("продолжить?");
+            answer = sc.next();
+        }
+        if (answer.equals("stop")){
+            System.out.println("bye, kid!");
+        }
+    }
+}
+
