@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double result = 0;
+
         Scanner sc = new Scanner(System.in);
         double a;
         double b;
@@ -18,23 +18,26 @@ public class Main {
             String operation = sc.next();
             switch (operation) {
                 case "+":
-                    result = (a + b);
+                    System.out.println("ответ: " + (a + b));
                     break;
                 case "-":
-                    result = (a - b);
+                    System.out.println("ответ: " + (a - b));
                     break;
                 case "*":
-                    (result) = (a * b);
+                    System.out.println("ответ: " + (a * b));
                     break;
                 case "/":
-                    (result) = (a / b);
+                    System.out.println("ответ: " + (a / b));
+                default:
+                    System.out.println("Несуществующее действие");
             }
-            System.out.println("ответ: " + result);
+
             System.out.println("продолжить?");
             answer = sc.next();
         }
         if (answer.equals("stop")){
-            System.out.println("bye, kid!");
+            System.out.println("bye, kid!");}
+            else {System.out.println("Нерелевантный ответ");
         }
     }
 }
